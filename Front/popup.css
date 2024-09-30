@@ -1,0 +1,10 @@
+body {
+  min-width: 200px;
+  min-height: 100px;
+  padding: 10px;
+}
+
+#timer {
+  font-size: 24px;
+  font-weight: bold;
+}

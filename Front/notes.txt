@@ -1,0 +1,18 @@
+Here is the anatomy of this code:
+
+starting with popup.js:
+    -first makes sure we are youtube
+    -then adds a click functionality to the two buttons: download caption & start quiz (quiz.html)
+    -holds a listener to update the subtitles live. this listens from content.js
+
+    so for the download captions functionality, this sends a command to content.js
+
+now onto content.js:
+    -first holds a mutation observer to observe the changes in captions live
+    -it listens to the command from popup.js = download captions
+    -if it receives this command, it activates the downloadcaptions fucntion.
+    -this fuction sends a command to background.js
+
+finally, background.js:
+    -it holds the code for initiate download. so basically it listens from content.js and
+    starts the download
