@@ -7,9 +7,9 @@ CORS(app, origins=["https://www.youtube.com"])
 
 @app.route('/process_data', methods=['POST'])
 def process_data():
-    data = request.json  # Assuming the extension sends data in JSON format
+    data = request.json  
     print(data)
-    # Your Python code to process the data
+    #Python code to process the data - from separate file
     new_data = {"key":data[0][0]}
 
     return new_data
